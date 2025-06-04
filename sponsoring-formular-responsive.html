@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsoring-Formular</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    img.logo {
+      display: block;
+      max-width: 100px;
+      height: auto;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1rem;
+      }
+
+      input, select, button {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h2>Sponsoring-Anfrage</h2>
+    <form action="https://formsubmit.co/niklasgoedecke@googlemail.com" method="POST">
+
+      <label for="kontaktperson">Dein Name (Kontaktperson zum Sponsoring Partner):</label>
+      <input type="text" name="kontaktperson" id="kontaktperson" required>
+
+      <label for="partner">Sponsoring Partner (Unternehmen):</label>
+      <input type="text" name="partner" id="partner" required>
+
+      <label for="betrag">Betrag (in Euro):</label>
+      <input type="number" name="betrag" id="betrag" min="0" step="0.01" required>
+
+      <label for="logo">Firmenlogo digital vorhanden?</label>
+      <select name="logo" id="logo" required>
+        <option value="">Bitte auswählen</option>
+        <option value="Ja">Ja</option>
+        <option value="Nein">Nein</option>
+      </select>
+
+      <label for="banner">Banner vorhanden?</label>
+      <select name="banner" id="banner" required>
+        <option value="">Bitte auswählen</option>
+        <option value="Ja">Ja</option>
+        <option value="Nein">Nein</option>
+      </select>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://deine-seite.de/danke.html">
+
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+
+</body>
+</html>
